@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:46:43 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/12 17:51:09 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:15:29 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(void)
 //		return (0);
 //	else
 //		return (1);
-	unsigned int	nsign = 1;
+	unsigned int	nsign = -1;
 	printf("\n%u\n", nsign);
 //	ft_printf("\n%u\n", nsign);
 //	if (output_u_origin != output_u_myfunction)
@@ -82,12 +82,19 @@ int	main(void)
 //		return (0);
 //	else
 //		return (1);
-	void	*nil = (void *)0;
-	printf("\n%p\n", nil);
+	void	*nill = (void *)0;
+	printf("\n%p\n", nill);
 //	ft_printf("\n%p\n", nil);
 //
 //	if (output_i_origin != output_i_myfunction)
 //		return (0);
 //	else
-//		return (1);
+//
+	char	*t = "teste";
+	char	*a = "para";
+	char	*b = "cada";
+	char	*c = "argumento";
+	char	*d = "diferente";
+	printf("\n%s %s %s %s %s\n", t, a, b, c, d);
+	return (1);
 }
