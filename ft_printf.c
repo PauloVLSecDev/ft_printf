@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:21:28 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/11 18:53:42 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/12 14:26:42 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,17 @@ static	char	*playholder_type(char c, var_list)
 
 int	ft_printf(const char *, ...)
 {
+	
+}
+
+int	main(void)
+{
+	int  x;
+	int  meu;
+
+	x = printf("%d, paulim bacana");
+	meu = ft_ printf("%d, paulim bacana");
+
+	
 	
 }
