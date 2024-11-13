@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/13 13:21:24 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/13 15:57:28 by pvitor-l         ###   ########.fr       */
+/*   Created: 2024/11/13 15:49:00 by pvitor-l          #+#    #+#             */
+/*   Updated: 2024/11/13 15:55:52 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libftprintf.h"
-#include "unistd.h"
+#include "libftprintf.h"
+#include <unistd.h>
 
-
-void	ft_putchar(char c)
+int	putstr(const char *s)
 {
-	write(1, &c, 1);
-}
-int	main(void)
-{
-	ft_putchar('s')
-}
+	int	len;
 
+	len = 0;
+	while (s[len] != '\0')
+	{
+		putchar(s[len]);		
+		len++;
+	}
+	return (len)
+}
