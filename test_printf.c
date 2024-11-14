@@ -6,11 +6,12 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:46:43 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/13 14:15:29 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:45:37 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 
 int	main(void)
@@ -90,11 +91,12 @@ int	main(void)
 //		return (0);
 //	else
 //
-	char	*t = "teste";
-	char	*a = "para";
-	char	*b = "cada";
-	char	*c = "argumento";
-	char	*d = "diferente";
-	printf("\n%s %s %s %s %s\n", t, a, b, c, d);
+	printf("\n%c %s, %p, %d, %i, %u, %x, %X, %%, %p\n", carac, string, &point, num, i, nsign, hex, HEX, nill);
+
+
+	printf(NULL);
+//	ft_printf("\n%p\n", nil);
+//
 	return (1);
+
 }

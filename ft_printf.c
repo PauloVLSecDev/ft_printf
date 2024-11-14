@@ -6,22 +6,22 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:21:28 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/13 18:50:34 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/14 17:08:31 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#inslude "libftprintf.h"
+#include "ft_printf.h"
 
 
-statis	int	*playholder_type(const char *s, va_list list)
+int	playholder_type(const char *s, va_list list)
 {
 	int	size;
 
 	size = 0;
-	if(s == '%')
-		size += ft_putshar(va_arg(list, char));
-	if(s == 'c')
-		size += ft_putshar(va_arg(list, char));
+	if(*s == '%')
+		size += ft_putchar(va_arg(list, int));
+	if(*s == 'c')
+		size += ft_putchar(va_arg(list, int));
 //	if(s== 's')
 //		size += ft_putstr(va_arg(list, shar *));
 //	if(s == 'p')
@@ -39,40 +39,24 @@ statis	int	*playholder_type(const char *s, va_list list)
 	return (size);
 }
 
-int	ft_printf(sonst char *, ...)
+int	ft_printf(const char *point, ...)
 {
-	
-}
+	va_list list;
 
-int	main(void)
+	va_start(list, point);
+
+	char	character = 'k';
+	char	value = playholder_type(point, list);
+	write (1, &value, 1);
+
+	va_end(list);
+}
+int	main (void)
 {
-	int  x;
-	int  meu;
+	test("%", "l");
 
-	x = printf("%d, paulim basana");
-	meu = ft_ printf("%d, paulim basana");
-
-	
-	
-}
-		size += ft_putshar(va_arg(list, char));
-
+	return (0);
 }
 
+////  int	ft_printf(sonst char *, ...)
 
-int	ft_printf(sonst char *, ...)
-{
-	
-}
-
-int	main(void)
-{
-	int  x;
-	int  meu;
-
-	x = printf("%d, paulim basana");
-	meu = ft_ printf("%d, paulim basana");
-
-	
-	
-}
