@@ -6,14 +6,13 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 15:49:00 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/13 15:55:52 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/14 20:30:58 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-#include <unistd.h>
+#include "ft_printf.h"
 
-int	putstr(const char *s)
+int	putstr(char *s)
 {
 	int	len;
 
@@ -23,5 +22,5 @@ int	putstr(const char *s)
 		putchar(s[len]);		
 		len++;
 	}
-	return (len)
+	return (len);
 }

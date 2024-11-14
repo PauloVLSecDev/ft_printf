@@ -6,14 +6,19 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 13:21:24 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/14 17:03:29 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/14 20:00:05 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libftprintf.h"
-#include "unistd.h"
+#include "ft_printf.h"
 
-void	ft_putchar(char c)
+int	putchar(int c)
 {
-	write(1, &c, 1);
+	int	i;
+	int	fd;
+
+	fd = 1;
+	i = 1;
+	write(fd, &c, 1);
+	return (1);
 }

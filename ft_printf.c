@@ -6,26 +6,26 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:21:28 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/14 17:08:31 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/14 20:33:43 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
+#include <stdio.h>
 
 int	playholder_type(const char *s, va_list list)
 {
 	int	size;
 
 	size = 0;
-	if(*s == '%')
-		size += ft_putchar(va_arg(list, int));
-	if(*s == 'c')
-		size += ft_putchar(va_arg(list, int));
-//	if(s== 's')
-//		size += ft_putstr(va_arg(list, shar *));
+	if(s == '%')
+		size += putchar(va_arg(list, int));
+	if(s == 'c')
+		size += putchar(va_arg(list, int));
+	if(s == 's')
+		size += putstr(va_arg(list, char *));
 //	if(s == 'p')
-//		size += ft_putstr(va_arg(list, shar *));
+//		size += ft_putstr(va_arg(list, char *));
 //	if(s == 'd')
 //		size += ft_putnbr(va_arg(list, int));
 //	if(s == 'i')
@@ -33,9 +33,9 @@ int	playholder_type(const char *s, va_list list)
 //	if(s == 'u')
 //		size += ft_putunbr(va_arg(list, unsigned int));
 //	if (s == 'x')
-//		size += ft_hexa(va_arg(list, shar *));
+//		size += ft_hexa(va_arg(list, char *));
 //	if (s == 'X')
-//		size += ft_hexa(va_arg(list, shar *));
+//		size += ft_hexa(va_arg(list, char *));
 	return (size);
 }
 
@@ -45,18 +45,19 @@ int	ft_printf(const char *point, ...)
 
 	va_start(list, point);
 
-	char	character = 'k';
-	char	value = playholder_type(point, list);
-	write (1, &value, 1);
-
+	int	value = playholder_type(point, list);
 	va_end(list);
+	return (value);
 }
+
 int	main (void)
 {
-	test("%", "l");
+	char	c;
+	char	*string;
 
+	string = "teste uma string";
+	c = 's';
+	ft_printf("%s", string);
 	return (0);
 }
-
-////  int	ft_printf(sonst char *, ...)
 
