@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:21:28 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/15 15:56:26 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/15 16:17:47 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ static int	playholder_type(const char *s, va_list list)
 
 	i = 0;
 	size = 0;
-	if(s[i] == '%')
+	if(s[i++] == '%')
 		size += putchar('%');
-	if(s[i] == 'c')
+	if(s[i++] == 'c')
 		size += putchar(va_arg(list, int));
-	if(s[i] == 's')
+	if(s[i++] == 's')
 		size += putstr(va_arg(list, char *));
 //	if(s{i} == 'p')
 //		size += ft_putstr(va_arg(list, char *));
@@ -56,7 +56,8 @@ int	ft_printf(const char *point, ...)
 		}
 		else
 		{
-			putchar(point[i]);
+			value += putchar(point[i]);
+			i++;
 		}
 	}
 	va_end(list);
@@ -69,8 +70,8 @@ int	main (void)
 	char	*string;
 
 	string = "teste novamente";
-	c = 's';
-	ft_printf("%c, %s parece que isto aqui nao importa", c, string);
+	c = 'l';
+	ft_printf("teste");
 	return (0);
 }
 
