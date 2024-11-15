@@ -6,13 +6,12 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:46:43 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/14 15:45:37 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:58:38 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "ft_printf.h"
 
 int	main(void)
 {
@@ -93,10 +92,12 @@ int	main(void)
 //
 	printf("\n%c %s, %p, %d, %i, %u, %x, %X, %%, %p\n", carac, string, &point, num, i, nsign, hex, HEX, nill);
 
-
-	printf(NULL);
+	printf("\n", NULL);
 //	ft_printf("\n%p\n", nil);
 //
+	int test = printf("quero apenas testar esse role aqui \n");
+	printf("%d \n", test);
+//	ft_printf("quero apenas testar esse role aqui");
 	return (1);
 
 }

@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 20:03:59 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/14 20:31:32 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:26:59 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-int	playholder_type(const char *s, va_list list);
 int	ft_printf(const char *point, ...);
 int	putchar(int c);
 int	putstr(char *s);

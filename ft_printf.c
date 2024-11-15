@@ -6,35 +6,33 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:21:28 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/14 20:33:43 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:56:26 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
 
-int	playholder_type(const char *s, va_list list)
+static int	playholder_type(const char *s, va_list list)
 {
 	int	size;
+	int	i;
 
+	i = 0;
 	size = 0;
-	if(s == '%')
+	if(s[i] == '%')
+		size += putchar('%');
+	if(s[i] == 'c')
 		size += putchar(va_arg(list, int));
-	if(s == 'c')
-		size += putchar(va_arg(list, int));
-	if(s == 's')
+	if(s[i] == 's')
 		size += putstr(va_arg(list, char *));
-//	if(s == 'p')
+//	if(s{i} == 'p')
 //		size += ft_putstr(va_arg(list, char *));
-//	if(s == 'd')
-//		size += ft_putnbr(va_arg(list, int));
-//	if(s == 'i')
+//	if(s{i} == 'd' || s[i] == 'i')
 //		size += ft_putnbr(va_arg(list, int));
 //	if(s == 'u')
 //		size += ft_putunbr(va_arg(list, unsigned int));
-//	if (s == 'x')
-//		size += ft_hexa(va_arg(list, char *));
-//	if (s == 'X')
+//	if (s[i] == 'x' || s[i] == 'X')
 //		size += ft_hexa(va_arg(list, char *));
 	return (size);
 }
@@ -42,10 +40,25 @@ int	playholder_type(const char *s, va_list list)
 int	ft_printf(const char *point, ...)
 {
 	va_list list;
-
+	int	value;
+	int	i;
+	
 	va_start(list, point);
 
-	int	value = playholder_type(point, list);
+	i = 0;
+	value = 0;
+	while (point[i])
+	{
+		if (point[i] == '%')
+		{
+			i++;
+			value += playholder_type(point, list);
+		}
+		else
+		{
+			putchar(point[i]);
+		}
+	}
 	va_end(list);
 	return (value);
 }
@@ -55,9 +68,9 @@ int	main (void)
 	char	c;
 	char	*string;
 
-	string = "teste uma string";
+	string = "teste novamente";
 	c = 's';
-	ft_printf("%s", string);
+	ft_printf("%c, %s parece que isto aqui nao importa", c, string);
 	return (0);
 }
 
