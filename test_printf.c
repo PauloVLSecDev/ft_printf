@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:46:43 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/15 15:58:38 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:58:13 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,8 @@ int	main(void)
 //	else
 //		return (1);
 	char	*point;
-	printf("\n%p\n", &point);
+	int number = printf("\n%p\n", &point);
+	printf("\n%d\n", number);
 //	ft_printf("\n%p\n", &point);
 //	if (output_i_origin != output_i_myfunction)
 //		return (0);
@@ -95,7 +96,7 @@ int	main(void)
 	printf("\n", NULL);
 //	ft_printf("\n%p\n", nil);
 //
-	int test = printf("quero apenas testar esse role aqui \n");
+	int test = printf("quero\n");
 	printf("%d \n", test);
 //	ft_printf("quero apenas testar esse role aqui");
 	return (1);

@@ -6,14 +6,14 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:21:28 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/15 16:17:47 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/15 20:19:57 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
 
-static int	playholder_type(const char *s, va_list list)
+static int	playsholder_type(const char *s, va_list list)
 {
 	int	size;
 	int	i;
@@ -28,8 +28,8 @@ static int	playholder_type(const char *s, va_list list)
 		size += putstr(va_arg(list, char *));
 //	if(s{i} == 'p')
 //		size += ft_putstr(va_arg(list, char *));
-//	if(s{i} == 'd' || s[i] == 'i')
-//		size += ft_putnbr(va_arg(list, int));
+	if(s[i] == 'd' || s[i] == 'i')
+		size += putnbr(va_arg(list, int));
 //	if(s == 'u')
 //		size += ft_putunbr(va_arg(list, unsigned int));
 //	if (s[i] == 'x' || s[i] == 'X')
@@ -52,7 +52,7 @@ int	ft_printf(const char *point, ...)
 		if (point[i] == '%')
 		{
 			i++;
-			value += playholder_type(point, list);
+			value += playsholder_type(point, list);
 		}
 		else
 		{

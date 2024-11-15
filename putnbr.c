@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   putnbr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/13 13:21:24 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/15 20:10:59 by pvitor-l         ###   ########.fr       */
+/*   Created: 2024/11/15 19:01:06 by pvitor-l          #+#    #+#             */
+/*   Updated: 2024/11/15 20:07:08 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf.c"
 
-int	putchar(int c)
+int	putnbr(int n)
 {
-	int	fd;
+	int	num;
+	int	result;
 
-	fd = 1;
-	return(write(fd, &c, 1));
+	result = 0;
+	num = n;
+	if (n < 0)
+	{
+		putchar('-');
+		num = -n;
+	}
+	while (n > 9)
+	{
+		putchar(n / 10);
+	}
+	putchar(n % 10);
 }

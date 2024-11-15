@@ -15,7 +15,8 @@ FLAGS = -Wall -Wextra -Werror
 
 STR = ft_putchar.c\
       ft_putstr.c\
-      ft_printf.c
+      ft_printf.c\
+      ft_putnbr.c
 
 OBS = $(STR:%.c=%.o)
 

@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 20:03:59 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/15 14:26:59 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/15 20:10:36 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@
 int	ft_printf(const char *point, ...);
 int	putchar(int c);
 int	putstr(char *s);
+int	putnbr(int n);
 
 #endif
