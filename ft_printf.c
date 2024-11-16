@@ -28,7 +28,7 @@ static int	playsholder_type(const char *s, va_list list)
 		size += putstr(va_arg(list, char *));
 //	if(s{i} == 'p')
 //		size += ft_putstr(va_arg(list, char *));
-	if(s[i] == 'd' || s[i] == 'i')
+	if(s[i++] == 'd' || s[i++] == 'i')
 		size += putnbr(va_arg(list, int));
 //	if(s == 'u')
 //		size += ft_putunbr(va_arg(list, unsigned int));
@@ -37,26 +37,26 @@ static int	playsholder_type(const char *s, va_list list)
 	return (size);
 }
 
-int	ft_printf(const char *point, ...)
+int	ft_printf(const char *s, ...)
 {
 	va_list list;
 	int	value;
 	int	i;
 	
-	va_start(list, point);
+	va_start(list, s);
 
 	i = 0;
 	value = 0;
-	while (point[i])
+	while (s[i])
 	{
-		if (point[i] == '%')
+		if (s[i] == '%')
 		{
 			i++;
-			value += playsholder_type(point, list);
+			value += playsholder_type(s, list);
 		}
 		else
 		{
-			value += putchar(point[i]);
+			value += putchar(s[i]);
 			i++;
 		}
 	}
@@ -67,11 +67,11 @@ int	ft_printf(const char *point, ...)
 int	main (void)
 {
 	char	c;
-	char	*string;
+	char	i;
 
-	string = "teste novamente";
+	i = 24;
 	c = 'l';
-	ft_printf("teste");
+	ft_printf("teste nois %i\n", i);
 	return (0);
 }
 

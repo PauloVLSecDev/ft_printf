@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-int	ft_printf(const char *point, ...);
+int	ft_printf(const char *s, ...);
 int	putchar(int c);
 int	putstr(char *s);
 int	putnbr(int n);
