@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putnbr.c                                           :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,23 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.c"
+#include "ft_printf.h"
 
 int	putnbr(int n)
 {
 	int	num;
 	int	result;
-
+	
 	result = 0;
-	num = n;
 	if (n < 0)
 	{
-		putchar('-');
-		num = -n;
+		result += ft_putchar('-');
+		n = -n;
 	}
-	while (n > 9)
+	if (n > 9)
 	{
-		putchar(n / 10);
+		putnbr(n / 10);
 	}
-	putchar(n % 10);
+	result += ft_putchar((n % 10) + '0');
+	 return (result);
 }

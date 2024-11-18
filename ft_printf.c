@@ -13,26 +13,24 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
-static int	playsholder_type(const char *s, va_list list)
+static int	playsholder_type(char p, va_list list)
 {
 	int	size;
-	int	i;
-
-	i = 0;
+	
 	size = 0;
-	if(s[i++] == '%')
-		size += putchar('%');
-	if(s[i++] == 'c')
-		size += putchar(va_arg(list, int));
-	if(s[i++] == 's')
+	if (p == '%')
+		size += ft_putchar('%');
+	if (p == 'c')
+		size += ft_putchar(va_arg(list, int));
+	if (p == 's')
 		size += putstr(va_arg(list, char *));
-//	if(s{i} == 'p')
+//	if (p == 'p')
 //		size += ft_putstr(va_arg(list, char *));
-	if(s[i++] == 'd' || s[i++] == 'i')
+	if (p == 'i' || p == 'd')
 		size += putnbr(va_arg(list, int));
-//	if(s == 'u')
+//	if (p == 'u')
 //		size += ft_putunbr(va_arg(list, unsigned int));
-//	if (s[i] == 'x' || s[i] == 'X')
+//	if (p == 'x' || p == 'X')
 //		size += ft_hexa(va_arg(list, char *));
 	return (size);
 }
@@ -41,23 +39,23 @@ int	ft_printf(const char *s, ...)
 {
 	va_list list;
 	int	value;
-	int	i;
+	int	index;
 	
 	va_start(list, s);
 
-	i = 0;
+	index = 0;
 	value = 0;
-	while (s[i])
+	while (s[index])
 	{
-		if (s[i] == '%')
+		if (s[index] == '%')
 		{
-			i++;
-			value += playsholder_type(s, list);
+			value += playsholder_type(s[index + 1], list);
+			index++;
 		}
 		else
 		{
-			value += putchar(s[i]);
-			i++;
+			value += ft_putchar(s[index]);
+			index++;
 		}
 	}
 	va_end(list);
@@ -67,11 +65,14 @@ int	ft_printf(const char *s, ...)
 int	main (void)
 {
 	char	c;
-	char	i;
+	char	porcentagem;
+	char	*string;
+	int	i;
 
 	i = 24;
-	c = 'l';
-	ft_printf("teste nois %i\n", i);
+	string = "print isto";
+       	c = 'h';
+	ft_printf("teste %% %s %c %i", string, c, i);
 	return (0);
 }
 

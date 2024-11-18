@@ -18,8 +18,9 @@
 # include <stdarg.h>
 
 int	ft_printf(const char *s, ...);
-int	putchar(int c);
+int	ft_putchar(char c);
 int	putstr(char *s);
 int	putnbr(int n);
+int	puthexa(int n);
 
 #endif

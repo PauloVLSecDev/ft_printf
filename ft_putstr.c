@@ -19,7 +19,7 @@ int	putstr(char *s)
 	len = 0;
 	while (s[len] != '\0')
 	{
-		putchar(s[len]);		
+		ft_putchar(s[len]);		
 		len++;
 	}
 	return (len);
