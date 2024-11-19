@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:21:28 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/19 15:13:20 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/19 16:01:18 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,20 +62,20 @@ int	ft_printf(const char *s, ...)
 	return (value);
 }
 
-int	main (void)
-{
-	char	c;
-	char	porcentagem;
-	char	*string;
-	int	i;
-
-	i = 24;
-	string = "print isto";
-       	c = 'h';
-	ft_printf("teste %% %s %c %i\n", string, c, i);
-	int size_printf = ft_printf("\n teste %s\n", string );
-	ft_printf("%d\n", size_printf);
-	return (0);
-}
+//int	main (void)
+//{
+//	char	c;
+//	char	porcentagem;
+//	char	*string;
+//	int	i;
+//
+//	i = 24;
+//	string = "print isto";
+//     	c = 'h';
+//	ft_printf("teste %% %s %c %i\n", string, c, i);
+//	int size_printf = ft_printf("\n teste %s\n", string );
+//	ft_printf("%d\n", size_printf);
+//	return (0);
+//}
 
 

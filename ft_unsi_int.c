@@ -1,50 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hexa.c                                          :+:      :+:    :+:   */
+/*   ft_unsi_int.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/19 15:02:14 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/19 18:26:05 by pvitor-l         ###   ########.fr       */
+/*   Created: 2024/11/19 19:48:05 by pvitor-l          #+#    #+#             */
+/*   Updated: 2024/11/19 20:02:59 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static	int	strlen (char *s)
+int	ft_unsi_int(int n)
 {
 	int	len;
 
 	len = 0;
-	while (s[len])
-		len++;
-	return (len);		
-}
-char	*hexadecimal(int c)
-{
-	
-	char	*basex;
-	char	*baseX;
-
-	if ()
-	basex = "0123456789abcdef";
-	baseX = "0123456789ABCDEF";
-
-
-}
-int	ft_puthexa(int hexa)
-{
-	int	size;
-	int	result;
-
-	size = strlen(hexa);
-
-	while (size--)
+	if (n < 0)
 	{
-		result = (hexa % 16);
-		hexadecimal(result)
+		n = n + 4294967295;
 	}
-
-	return (size).
+	if (n > 9)
+	{
+			len += ft_unsi_int((n / 10) + '0');
+	}
+	len += putchar((n % 10) + '0');
+	return (len);
 }
