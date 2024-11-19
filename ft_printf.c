@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:21:28 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/15 20:19:57 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/19 15:13:20 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ static int	playsholder_type(char p, va_list list)
 
 int	ft_printf(const char *s, ...)
 {
-	va_list list;
+	va_list	list;
 	int	value;
 	int	index;
-	
+
 	va_start(list, s);
 
 	index = 0;
@@ -50,7 +50,7 @@ int	ft_printf(const char *s, ...)
 		if (s[index] == '%')
 		{
 			value += playsholder_type(s[index + 1], list);
-			index++;
+			index += 2;
 		}
 		else
 		{
@@ -72,7 +72,10 @@ int	main (void)
 	i = 24;
 	string = "print isto";
        	c = 'h';
-	ft_printf("teste %% %s %c %i", string, c, i);
+	ft_printf("teste %% %s %c %i\n", string, c, i);
+	int size_printf = ft_printf("\n teste %s\n", string );
+	ft_printf("%d\n", size_printf);
 	return (0);
 }
+
 
