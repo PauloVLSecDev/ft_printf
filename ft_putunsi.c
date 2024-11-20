@@ -6,13 +6,13 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 19:48:05 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/19 20:02:59 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:23:07 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_unsi_int(int n)
+int	ft_unsi(int n)
 {
 	int	len;
 
@@ -22,9 +22,18 @@ int	ft_unsi_int(int n)
 		n = n + 4294967295;
 	}
 	if (n > 9)
-	{
-			len += ft_unsi_int((n / 10) + '0');
-	}
+		len += ft_unsi_int((n / 10) + '0');
 	len += putchar((n % 10) + '0');
 	return (len);
+}
+int	main(void)
+{
+	int num1;
+	int num2;
+
+	num1 = 104;
+	num2 = -104;
+	ft_unsi(number);
+	ft_unsi(number);
+	return (0);
 }

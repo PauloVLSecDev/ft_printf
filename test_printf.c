@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:46:43 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/19 20:14:28 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:14:24 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int	main(void)
 //		return (0);
 //	else
 //		return (1);
-	unsigned int hex = 42346;
+	unsigned int hex = -42346;
 	printf("\n%x\n", hex);
 //	ft_printf("\x%c\n", hex);
 //	if (output_i_origin != output_i_myfunction)
