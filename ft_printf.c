@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:21:28 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/19 16:01:18 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/20 20:54:08 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ static int	playsholder_type(char p, va_list list)
 //		size += ft_putstr(va_arg(list, char *));
 	if (p == 'i' || p == 'd')
 		size += putnbr(va_arg(list, int));
-//	if (p == 'u')
-//		size += ft_putunbr(va_arg(list, unsigned int));
-//	if (p == 'x' || p == 'X')
-//		size += ft_hexa(va_arg(list, char *));
+	if (p == 'u')
+		size += ft_put_unsi(va_arg(list, unsigned int));
+	if (p == 'x' || p == 'X')
+		size += ft_hex(va_arg(list, unsigned int), p);
 	return (size);
 }
 
@@ -61,21 +61,3 @@ int	ft_printf(const char *s, ...)
 	va_end(list);
 	return (value);
 }
-
-//int	main (void)
-//{
-//	char	c;
-//	char	porcentagem;
-//	char	*string;
-//	int	i;
-//
-//	i = 24;
-//	string = "print isto";
-//     	c = 'h';
-//	ft_printf("teste %% %s %c %i\n", string, c, i);
-//	int size_printf = ft_printf("\n teste %s\n", string );
-//	ft_printf("%d\n", size_printf);
-//	return (0);
-//}
-
-
