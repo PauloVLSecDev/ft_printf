@@ -6,13 +6,13 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 15:49:00 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/19 18:28:28 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/21 17:38:15 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	putstr(char *s)
+int	ft_putstr(char *s)
 {
 	int	len;
 

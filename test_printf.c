@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:46:43 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/20 20:07:31 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/21 17:52:03 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,14 +73,14 @@ int	main(void)
 	printf("\n\033[32m[TEST S]\n\033]0m");
 	printf("\n");
 
-	char	*string = "printe isto";
-	char *s_origin = printf("%s", string);
-	char *s_my = ft_printf("%s", string);
-	if (strcmp (s_origin, s_my) == 0)
-		printf("\033[32m[OK] \033]0m");
-	else
-		printf("\033[31m[KO] \033[0m \nexpected %s your %s\n", s_origin, s_my);
-
+//	char	*string = "printe isto";
+//	char *s_origin = printf("%s", string);
+//	char *s_my = ft_printf("%s", string);
+//	if (strcmp (s_origin, s_my) == 0)
+//		printf("\033[32m[OK] \033]0m");
+//	else
+//		printf("\033[31m[KO] \033[0m \nexpected %s your %s\n", s_origin, s_my);
+//
 //	printf("\n\033[32m[TEST S]\n\033]0m");
 //	printf("\n");
 //
@@ -120,9 +120,9 @@ int	main(void)
 //		return (0);
 //	else
 //		return (1);
-//	unsigned int hex = -42346;
-//	printf("\n%x\n", hex);
-//	ft_printf("\x%c\n", hex);
+	unsigned int hex = -4236;
+	printf("\n%x\n", hex);
+	ft_printf("\n%x\n", hex);
 //	if (output_i_origin != output_i_myfunction)
 //		return (0);
 //	else
@@ -148,22 +148,13 @@ int	main(void)
 	void	*nill = (void *)0;
 	printf("\n%p\n", nill);
 	ft_printf("\n%p\n", nill);
-//
-//	if (output_i_origin != output_i_myfunction)
-//		return (0);
-//	else
-//
-//	printf("\n%c %s, %p, %d, %i, %u, %x, %X, %%, %p\n", carac, string, &point, num, i, nsign, hex, HEX, nill);
 
-//	printf();
-//	ft_printf("\n%p\n", nil);
-//
+//	printf("\n%c %s, %p, %d, %i, %u, %x, %X, %%, %p\n", carac, string, &point, num, i, nsign, hex, HEX, nill);
+//	ft_printf("\n%c %s, %p, %d, %i, %u, %x, %X, %%, %p\n", carac, string, &point, num, i, nsign, hex, HEX, nill);
+
 	int test = printf("quero\n");
 	printf("%d \n", test);
 	ft_printf("quero apenas testar esse role aqui");
-
-	printf(0);
-	ft_printf(0);
 
 	return (1);
 
