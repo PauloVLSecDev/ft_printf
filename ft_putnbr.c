@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:03:17 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/22 16:11:36 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/22 16:37:18 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	putnbr(int n)
 {
-	int	result;
 	long	num;
+	int		result;
 
 	num = (long)n;
 	result = 0;
