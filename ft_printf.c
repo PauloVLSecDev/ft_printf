@@ -6,12 +6,11 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:21:28 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/22 16:24:17 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/22 17:57:16 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 static int	playsholder_type(char p, va_list list)
 {
