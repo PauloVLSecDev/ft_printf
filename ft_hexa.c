@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:02:14 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/21 19:54:33 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/22 15:44:14 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,19 @@
 static int	ft_base(unsigned long n, char c)
 {
 	char	*base;
-	int result;
+	int		result;
 
 	result = 0;
 	if (c == 'x')
 		base = "0123456789abcdef";
 	if (c == 'X')
 		base = "0123456789ABCDEF";
-	if (n > 16)
+	if (n >= 16)
 		result += ft_base((n / 16), c);
 	result += ft_putchar(base[n % 16]);
 	return (result);
 }
+
 int	ft_hex(unsigned long hexa, char c)
 {
 	int	len;

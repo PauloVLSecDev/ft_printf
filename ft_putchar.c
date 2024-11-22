@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 13:21:24 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/15 20:10:59 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/22 14:38:51 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ int	ft_putchar(char c)
 	int	fd;
 
 	fd = 1;
-	return(write(fd, &c, 1));
+	return (write(fd, &c, 1));
 }

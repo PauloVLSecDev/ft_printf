@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:21:28 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/21 19:46:07 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/22 16:24:17 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 static int	playsholder_type(char p, va_list list)
 {
 	int	size;
-	
+
 	size = 0;
 	if (p == '%')
 		size += ft_putchar('%');
@@ -31,15 +31,15 @@ static int	playsholder_type(char p, va_list list)
 	if (p == 'u')
 		size += ft_put_unsi(va_arg(list, unsigned int));
 	if (p == 'x' || p == 'X')
-		size += ft_hex(va_arg(list, unsigned long), p);
+		size += ft_hex(va_arg(list, unsigned int), p);
 	return (size);
 }
 
 int	ft_printf(const char *format, ...)
 {
 	va_list	list;
-	int	value;
-	int	index;
+	int		value;
+	int		index;
 
 	if (!format)
 		return (-1);

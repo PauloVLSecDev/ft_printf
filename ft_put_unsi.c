@@ -6,12 +6,12 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 19:48:05 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/20 16:16:54 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/22 14:34:48 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
+
 int	ft_put_unsi(unsigned int n)
 {
 	int	len;
