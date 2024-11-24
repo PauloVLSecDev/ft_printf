@@ -44,7 +44,6 @@ int	ft_pnt(unsigned long point)
 	len = 0;
 	if (!point)
 		return (len += ft_putstr("(nil)"));
-	len = 0;
 	len += ft_putstr("0x");
 	len += ft_base(point, 'x');
 	return (len);
